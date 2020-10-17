@@ -78,5 +78,23 @@ def gc():
     html_facts = "\n".join(["<div>"+f+"</div>" for f in facts])
     return html_template.format("GGCO Facts", html_facts)    
 
+@app.route('/')
+def main():
+    return """<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>mini-web-apps.di2.io</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <ul>
+     <li><a href='/sm'>Sophia & Martin</a></li>
+     <li><a href='https://ggco.de'>GGCO</a></li>
+    </ul>
+  </body>
+</html>"""
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='80', debug=False)
