@@ -1,7 +1,7 @@
 from flask import Flask
 app = Flask(__name__)
 
-from datetime import date
+from datetime import date, timedelta
 
 html_template = """<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
   \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
@@ -42,28 +42,29 @@ sm_verheirated = date(2019, 4, 25)
 sm_jenaer_str = date(2012, 3, 17)
 sm_linnea = date(2020, 6, 4)
 
-gc_verheirated = date(2016, 12, 22)
+gc_verheirated = date(2016, 12, 23)
 
-heute = date.today()
+def get_heute():
+    return date.today() + timedelta(days=1)
 
 def sm_zusammen_seit():
-    tage = heute - sm_zusammen
+    tage = get_heute() - sm_zusammen
     return "Sophia und Martin sind seit {} Tagen zusammen.".format(tage.days)
 
 def sm_verheiratet_seit():
-    tage = heute - sm_verheirated
+    tage = get_heute() - sm_verheirated
     return "Sophia und Martin sind seit {} Tagen verheiratet.".format(tage.days)
 
 def gc_verheiratet_seit():
-    tage = heute - gc_verheirated
+    tage = get_heute() - gc_verheirated
     return "Conny und Georg sind seit {} Tagen verheiratet.".format(tage.days)
 
 def sm_linnea_seit():
-    tage = heute - sm_linnea
+    tage = get_heute() - sm_linnea
     return "Linnea ist {} Tage alt.".format(tage.days)
 
 def sm_jenaer_str_seit():
-    tage = heute - sm_jenaer_str
+    tage = get_heute() - sm_jenaer_str
     return "Sophia und Martin wohnen seit Tagen zusammen in der Jenaer Str. in Erlangen.".format(tage.days)
 
 @app.route('/sm')
