@@ -45,7 +45,7 @@ sm_linnea = date(2020, 6, 4)
 gc_verheirated = date(2016, 12, 23)
 
 def get_heute():
-    return date.today() + timedelta(days=1)
+    return date.today()
 
 def sm_zusammen_seit():
     tage = get_heute() - sm_zusammen
@@ -61,11 +61,11 @@ def gc_verheiratet_seit():
 
 def sm_linnea_seit():
     tage = get_heute() - sm_linnea
-    return "Linnea ist {} Tage alt.".format(tage.days)
+    return "Linnea ist {} Tage ({} Wochen) alt.".format(tage.days, int(tage.days/7))
 
 def sm_jenaer_str_seit():
     tage = get_heute() - sm_jenaer_str
-    return "Sophia und Martin wohnen seit Tagen zusammen in der Jenaer Str. in Erlangen.".format(tage.days)
+    return "Sophia und Martin wohnen seit {} Tagen zusammen in der Jenaer Str. in Erlangen.".format(tage.days)
 
 @app.route('/sm')
 def sm():
