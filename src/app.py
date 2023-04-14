@@ -25,7 +25,7 @@ html_template = """<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
      </table>
 <div>
 <small>Impressum: V.i.S.d.P. für diese Seite und ihren Inhalt:
-Martin Enders, 
+Dr. Martin Enders, 
 Jenaer Str. 61, 
 91058 Erlangen, 
 martin@martin-enders.de, 
