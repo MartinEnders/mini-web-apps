@@ -26,8 +26,8 @@ html_template = """<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
 <div>
 <small>Impressum: V.i.S.d.P. für diese Seite und ihren Inhalt:
 Dr. Martin Enders, 
-Jenaer Str. 61, 
-91058 Erlangen, 
+Am Letten 25a, 
+96317 Kronach, 
 martin@martin-enders.de, 
 Tel: 0049 157 321 458 72 
 </small>
@@ -42,7 +42,7 @@ sm_verheirated = date(2019, 4, 25)
 sm_jenaer_str = date(2012, 3, 17)
 sm_linnea = date(2020, 6, 4)
 
-gc_verheirated = date(2016, 12, 23)
+gc_verheirated = date(2015, 12, 23)
 
 def get_heute():
     return date.today()
